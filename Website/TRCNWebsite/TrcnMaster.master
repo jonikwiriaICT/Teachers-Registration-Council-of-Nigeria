@@ -1,0 +1,1095 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="TrcnMaster.master.cs" Inherits="TrcnMaster" %>
+
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="TRCN developer Team">
+    <meta name="keywords" content="TRCN flexible boostrap">
+    <meta name="author" content="JOHNWENDY">
+    <title>TRCN Certificate</title>
+    <link rel="apple-touch-icon" href="trcn.png">
+    <link rel="shortcut icon" type="image/x-icon" href="trcn.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%f7CQuicksand:300,400,500,700" rel="stylesheet">
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/tables/datatable/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/tables/extensions/responsive.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/tables/extensions/colReorder.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/tables/extensions/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/tables/datatable/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/tables/extensions/fixedHeader.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/forms/icheck/icheck.css">
+    <link href="assets/fonts/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/forms/icheck/custom.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/ui/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/forms/selects/select2.min.css">
+    <!--FONT AWESOME  -->
+    <link href="..assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN MODERN CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+    <!-- END MODERN CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/core/colors/palette-gradient.css">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- END Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/weather-icons/climacons.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/meteocons/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/charts/morris.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/charts/chartist.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/charts/chartist-plugin-tooltip.css">
+    <!-- END VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/pages/timeline.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/pages/dashboard-ecommerce.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/plugins/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/plugins/forms/checkboxes-radios.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/plugins/ui/jqueryui.css">
+
+    <style>
+        body, p, td, textarea {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            line-height: 20px;
+            color: #3c4e57;
+        }
+
+        body, html {
+            padding: 10px;
+            height: 100%;
+            /* Full height */
+            height: 100%;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 20px;
+        }
+
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: white;
+            border-radius: 10px;
+        }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background-color: #63d471;
+                background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+            }
+    </style>
+    <script>
+
+</script>
+    <!-- END Page Level CSS-->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-col="2-columns">
+    <!-- fixed-top-->
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light bg-success navbar-shadow">
+            <div class="navbar-wrapper">
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav flex-row">
+                        <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                        <li class="nav-item"><a class="navbar-brand" href="en">
+                            <img class="brand-logo" alt="modern admin logo" src="trcn.png">
+                            <h3 class="brand-text">TRCN</h3>
+                        </a></li>
+                        <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="la la-ellipsis-v"></i></a></li>
+                    </ul>
+                </div>
+                <div class="navbar-container content">
+                    <div class="collapse navbar-collapse" id="navbar-mobile">
+                        <ul class="nav navbar-nav mr-auto float-left">
+                            <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
+                            <li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#">Teachers' Registration Council of Nigeria</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav float-right">
+                            <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"><span class="mr-1">Hello,<span class="user-name text-bold-700"><asp:Label ID="lblFullname" runat="server"></asp:Label></span></span><span class="avatar avatar-online">
+                                <img src="<%= UserImage %>" alt="TRCNIMAGE" /><i></i></span></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+
+                                    <button type="button" class=" dropdown-item" data-toggle="modal" data-target="#zoomInDown">
+                                        <i class=" la la-floppy-o "></i>&nbsp	Change Password
+                                    </button>
+                                    <div class="dropdown-divider"></div>
+                                    <button type="button" class="dropdown-item" data-toggle="modal" data-target="#zoomInRight">
+                                        <i class="la la-sign-out"></i>&nbsp  Sign out
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+        <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow " data-scroll-to-active="true">
+            <div class="main-menu-content">
+                <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                    <li class=" nav-item">
+                        <asp:HyperLink ID="adminDashboard" runat="server" NavigateUrl="~/task">
+                                   <a href="Dashboard"><i class=" la la-dashboard "></i><span class="menu-title" data-i18n="nav.dash.main">Dashboard</span></a>                       
+                        </asp:HyperLink>
+                    </li>
+                    <li class=" nav-item">
+                        <asp:HyperLink ID="documentation" runat="server" NavigateUrl="~/document">
+                                  <i class="la la-tasks"></i><span class="menu-title" data-i18n="nav.templates.main">Documentation</span>
+                        </asp:HyperLink>
+
+                    </li>
+                    <li class=" nav-item">
+                        <asp:HyperLink ID="account" runat="server" NavigateUrl="Account-Dashboard">
+                                   <i class="la la-credit-card"></i><span class="menu-title" data-i18n="nav.templates.main">Account</span>
+                        </asp:HyperLink>
+                    </li>
+                    <li class=" nav-item">
+                        <asp:HyperLink ID="StateOffice" runat="server" NavigateUrl="~/StateOfficeAccount">
+                                   <i class=" la la-home"></i><span class="menu-title" data-i18n="nav.templates.main">State Office</span>
+                        </asp:HyperLink>
+                    </li>
+                    <li class=" nav-item">
+                        <asp:HyperLink ID="certificate" runat="server" NavigateUrl="Cert">
+                                   <i class="la la-certificate"></i><span class="menu-title" data-i18n="nav.templates.main">Certificate</span>
+                        </asp:HyperLink>
+                    </li>
+
+
+                    <li class=" nav-item">
+                        <asp:HyperLink ID="sysAdministrator" runat="server" NavigateUrl="Admin">
+                                   <i class="la la-gears"></i><span class="menu-title" data-i18n="nav.templates.main">Administrator</span>
+                        </asp:HyperLink>
+                    </li>
+
+                </ul>
+                <div class=" col-sm-12">
+                    <div class="card">
+                        <div class=" card-header">
+                            <div class=" card-title ">
+                                <h6><i class="la la-users text-success"></i>&nbsp Online Users</h6>
+                            </div>
+                        </div>
+                        <div id="divusers" class="card-body">
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="app-content content">
+            <div class="content-wrapper ">
+                <div class=" content-body">
+                    <div class="row breadcrumbs-top">
+                        <div class="breadcrumb-wrapper col-12">
+                            <%--                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="#">Footer</a>
+                                </li>
+                                <li class="breadcrumb-item active">Footer Components
+                                </li>
+                            </ol>--%>
+                        </div>
+                    </div>
+                    <asp:Panel ID="pnlAlert" runat="server" CssClass="alert alert-danger" Visible="false">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <span id="spIcon" runat="server"></span>
+                        <asp:Label ID="lblMsg" CssClass="text-white " runat="server" Text=""></asp:Label>
+                    </asp:Panel>
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="modal animated zoomInRight text-left" id="zoomInRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel72" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title " id="myModalLabel72"><i class=" la la-sign-out   "></i>&nbsp Sign out</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label class=" text-danger ">Are you sure that you want to sign out?</label>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-outline-danger" id="Button1" onserverclick="Signout_Clicked" runat="server">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal animated zoomInDown text-left" id="zoomInDown" tabindex="-1" role="dialog" aria-labelledby="myModalLabel70" aria-hidden="true">
+            <div class=" modal-dialog " role="document">
+                <div class=" modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title " id="myModalLabel70"><i class="la la-floppy-o"></i>&nbsp Change Password</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class=" card">
+                            <div class="card-content collapse show">
+                                <div class="card-body">
+                                    <div class="card-text">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 form-group-sm text-sm-right" style="font-size: 12px">
+                                            Email
+                                        </div>
+                                        <div class="col-sm-8 form-group-sm">
+                                            <asp:TextBox ID="txtemailAddress" CssClass="form-control" runat="server"></asp:TextBox>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 form-group-sm text-sm-right" style="font-size: 12px">
+                                            New Password
+                                        </div>
+                                        <div class="col-sm-8 form-group-sm">
+                                            <asp:TextBox ID="txtOldPassword" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 form-group-sm text-sm-right" style="font-size: 12px">
+                                            Confirm Password
+                                        </div>
+                                        <div class="col-sm-8 form-group-sm">
+                                            <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn grey btn-outline-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-outline-success" id="Button2" onserverclick="changePassword_Clicked" runat="server">save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade text-left" id="modalPasswordSet" tabindex="-1" role="dialog" aria-labelledby="modalPasswordSet" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title " id="modalSet"><i class=" la la-code     "></i>&nbsp set Password</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class=" form-group row">
+                            <div class=" col-md-12">
+                                <label>Email Address</label>
+                                <asp:TextBox ID="emailAddress" TextMode="Email" runat="server"></asp:TextBox>
+                            </div>
+
+                        </div>
+                        <div class=" form-group row">
+
+                            <div class=" col-md-6">
+                                <label>New Password</label>
+                                <asp:TextBox ID="sPassword" TextMode="Password" runat="server"></asp:TextBox>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn grey btn-outline-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-outline-success" id="Button3" runat="server">save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%-- Modal Set Picture --%>
+        <div class="modal animated zoomInDown text-left" id="modalSetPicture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel70" aria-hidden="true">
+            <div class=" modal-dialog " role="document">
+                <div class=" modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title " id="myModalLabel71"><i class=" la la-user"></i>&nbsp Change Picture</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <%-- modal Body --%>
+
+                    <div class="modal-body">
+                        <div class="container">
+
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+
+                                <Triggers>
+                                    <asp:PostBackTrigger ControlID="btnChangePicModel" />
+                                </Triggers>
+                                <ContentTemplate>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <table class="table table-bordered table-striped table-hover table-responsive">
+
+                                                <tr>
+
+                                                    <div class="col-md-12">
+                                                        <td class="text-primary col-md-4" style="font-weight: bold;">
+                                                            <img id="ImgDisp" src="" class="user-image" style="height: 50px; width: 50px" />
+                                                        </td>
+                                                        <td class="text-primary col-md-4" style="font-weight: bold;">
+                                                            <asp:FileUpload ID="FileUpload1" runat="server" class=" no-border" />
+                                                        </td>
+                                                        <td class="col-md-4">
+
+                                                            <asp:Button ID="btnChangePicModel" runat="server" Text="Update Picture" CssClass=" btn btn-sm btn-outline-info" OnClick="btnChangePicModel_Click" />
+
+
+                                                        </td>
+                                                    </div>
+
+                                                </tr>
+
+
+                                                <tr>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <%--   <footer class="footer footer-static footer-light navbar-border navbar-shadow footer">
+            <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">Powered by <a href="http://www.cloudware.com.ng" target="_blank">Cloudware Limited</a></span></p>
+        
+        </footer>--%>
+    </form>
+
+    <!-- BEGIN VENDOR JS-->
+
+    <script src="assets/vendors/js/vendors.min.js"></script>
+    <script src="/js/scripts/pages/dashboard-crypto.js"></script>
+    <script src="assets/vendors/js/tables/datatable/datatables.min.js"></script>
+    <script src="assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="assets/vendors/js/tables/buttons.colVis.min.js"></script>
+    <%--   <script src="assets/vendors/js/charts/chart.min.js"></script>--%>
+    <%--   <script src="assets/vendors/js/charts/echarts/echarts.js"></script>--%>
+    <script src="assets/vendors/js/tables/datatable/dataTables.colReorder.min.js"></script>
+    <script src="assets/vendors/js/tables/datatable/dataTables.buttons.min.js"></script>
+    <script src="assets/vendors/js/tables/datatable/buttons.bootstrap4.min.js"></script>
+    <script src="assets/vendors/js/tables/datatable/dataTables.fixedHeader.min.js"></script>
+    <script src="assets/vendors/js/forms/icheck/icheck.min.js"></script>
+    <script src="assets/js/core/libraries/jquery_ui/jquery-ui.min.js"></script>
+    <script src="assets/js/scripts/ui/jquery-ui/date-pickers.js"></script>
+    <script src="assets/vendors/js/forms/select/select2.min.js"></script>
+    <%--    <script src="assets/vendors/js/charts/chartist.min.js"></script>
+    <script src="assets/vendors/js/charts/chartist-plugin-tooltip.min.js"></script>
+    <script src="assets/vendors/js/charts/raphael-min.js"></script>
+    <script src="assets/vendors/js/charts/morris.min.js"></script>--%>
+    <script src="assets/vendors/js/timeline/horizontal-timeline.js"></script>
+    <script src="assets/vendors/js/forms/icheck/icheck.min.js"></script>
+    <script src="assets/js/scripts/pages/project-task-list.js"></script>
+    <%--    <script src="assets/js/scripts/pages/dashboard-ecommerce.js"></script>--%>
+    <script src="assets/js/scripts/modal/components-modal.js"></script>
+    <script src="assets/js/scripts/tables/datatables-extensions/datatable-responsive.js"></script>
+    <script src="assets/js/scripts/ui/jquery-ui/navigations.js"></script>
+    <script src="assets/js/scripts/pages/dashboard-crypto.js"></script>
+    <script src="assets/js/core/app-menu.js"></script>
+    <script src="assets/js/core/app.js"></script>
+    <script src="assets/Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <script src="assets/Scripts/angular-signalr-hub.min.js"></script>
+    <script src="assets/Scripts/jquery.signalR-2.2.2.js"></script>
+    <script src="assets/Scripts/emojionearea.js"></script>
+    <script src="signalr/hubs"></script>
+    <script src="assets/counter.js"></script>
+    <script src="assets/countries.js"></script>
+
+    <script>
+        $('.counters').each(function () {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            },
+                {
+                    duration: 9500,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+        });
+    </script>
+    <script>
+        function passwordSet() {
+            $('#modalPasswordSet').modal('show')
+        }
+    </script>
+    <script>
+        function setPassword() {
+            $('#modalSetPassword').modal('show')
+        }
+    </script>
+    <script>
+        function logout() {
+            $('#modalSignout').modal('show')
+        }
+    </script>
+    <!-- END PAGE LEVEL JS-->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5d3d96ae6d808312283a6351/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <%--   <script type="text/javascript">
+
+        var IntervalVal;
+        $(function () {
+
+            // Declare a proxy to reference the hub.
+
+            var chatHub = $.connection.chatHub;
+            registerClientMethods(chatHub);
+            // Start Hub
+            $.connection.hub.start().done(function () {
+
+                registerEvents(chatHub)
+
+            });
+
+            // Reset Message Counter on Hover
+            $("#divChatWindow").mouseover(function () {
+
+                $("#MsgCountMain").html('0');
+                $("#MsgCountMain").attr("title", '0 New Messages');
+            });
+
+            // Diplay Image Preview on File Upload 
+            $(document).on('change', '#<%= FileUpload1.ClientID%>', function (e) {
+
+                var tmppath = URL.createObjectURL(e.target.files[0]);
+                $("#ImgDisp").attr('src', tmppath);
+
+            });
+
+            // Stop Title Alert
+            window.onfocus = function (event) {
+                if (event.explicitOriginalTarget === window) {
+
+                    clearInterval(IntervalVal);
+                    document.title = 'Mevapis';
+                }
+            }
+
+        });
+
+        // Show Title Alert
+        function ShowTitleAlert(newMessageTitle, pageTitle) {
+            if (document.title == pageTitle) {
+                document.title = newMessageTitle;
+            }
+            else {
+                document.title = pageTitle;
+            }
+        }
+
+        function registerEvents(chatHub) {
+
+            var name = '<%= this.UserName %>';
+
+            if (name.length > 0) {
+                chatHub.server.connect(name);
+
+            }
+
+
+            // Clear Chat
+            $('#btnClearChat').click(function () {
+
+                var msg = $("#divChatWindow").html();
+
+                if (msg.length > 0) {
+                    chatHub.server.clearTimeout();
+                    $('#divChatWindow').html('');
+
+                }
+            });
+
+            // Send Button Click Event
+            $('#btnSendMsg').click(function () {
+
+                var msg = $("#txtMessage").val();
+
+                if (msg.length > 0) {
+
+                    var userName = $('#hdUserName').val();
+
+                    var date = GetCurrentDateTime(new Date());
+
+                    chatHub.server.sendMessageToAll(userName, msg, date);
+                    $("#txtMessage").val('');
+                }
+            });
+
+            // Send Message on Enter Button
+            $("#txtMessage").keypress(function (e) {
+                if (e.which == 13) {
+                    $('#btnSendMsg').click();
+                }
+            });
+        }
+
+        function registerClientMethods(chatHub) {
+
+
+            // Calls when user successfully logged in
+            chatHub.client.onConnected = function (id, userName, allUsers, messages, times) {
+
+                $('#hdId').val(id);
+                $('#hdUserName').val(userName);
+                $('#spanUser').html(userName);
+
+                // Add All Users
+                for (i = 0; i < allUsers.length; i++) {
+
+                    AddUser(chatHub, allUsers[i].ConnectionId, allUsers[i].UserName, allUsers[i].UserImage, allUsers[i].LoginTime);
+                }
+
+                // Add Existing Messages
+                for (i = 0; i < messages.length; i++) {
+                    AddMessage(messages[i].UserName, messages[i].Message, messages[i].Time, messages[i].UserImage);
+
+                }
+            }
+
+            // On New User Connected
+            chatHub.client.onNewUserConnected = function (id, name, UserImage, loginDate) {
+                AddUser(chatHub, id, name, UserImage, loginDate);
+            }
+
+            // On User Disconnected
+            chatHub.client.onUserDisconnected = function (id, userName) {
+
+                $('#Div' + id).remove();
+
+                var ctrId = 'private_' + id;
+                $('#' + ctrId).remove();
+
+
+                var disc = $('<div class="disconnect">"' + userName + '" logged off.</div>');
+
+                $(disc).hide();
+                $('#divusers').prepend(disc);
+                $(disc).fadeIn(200).delay(2000).fadeOut(200);
+
+            }
+
+            chatHub.client.messageReceived = function (userName, message, time, userimg) {
+
+                AddMessage(userName, message, time, userimg);
+
+                // Display Message Count and Notification
+                var CurrUser1 = $('#hdUserName').val();
+                if (CurrUser1 != userName) {
+
+                    var msgcount = $('#MsgCountMain').html();
+                    msgcount++;
+                    $("#MsgCountMain").html(msgcount);
+                    $("#MsgCountMain").attr("title", msgcount + ' New Messages');
+                    var Notification = 'New Message From ' + userName;
+                    IntervalVal = setInterval("ShowTitleAlert('Mevapis', '" + Notification + "')", 800);
+
+                }
+            }
+
+
+            chatHub.client.sendPrivateMessage = function (windowId, fromUserName, message, userimg, CurrentDateTime) {
+
+                var ctrId = 'private_' + windowId;
+                if ($('#' + ctrId).length == 0) {
+
+                    OpenPrivateChatBox(chatHub, windowId, ctrId, fromUserName, userimg);
+
+                }
+
+                var CurrUser = $('#hdUserName').val();
+                var Side = 'right';
+                var TimeSide = 'left';
+
+                if (CurrUser == fromUserName) {
+                    Side = 'left';
+                    TimeSide = 'right';
+
+                }
+                else {
+                    var Notification = 'New Message From ' + fromUserName;
+                    IntervalVal = setInterval("ShowTitleAlert('Mevapis', '" + Notification + "')", 800);
+
+                    var msgcount = $('#' + ctrId).find('#MsgCountP').html();
+                    msgcount++;
+                    $('#' + ctrId).find('#MsgCountP').html(msgcount);
+                    $('#' + ctrId).find('#MsgCountP').attr("title", msgcount + ' New Messages');
+                }
+
+                var divChatP = '<div class="direct-chat-msg ' + Side + '">' +
+                    '<div class="direct-chat-info clearfix">' +
+                    '<span class="direct-chat-name pull-' + Side + '">' + fromUserName + '</span>' +
+                    '<span class="direct-chat-timestamp pull-' + TimeSide + '"">' + CurrentDateTime + '</span>' +
+                    '</div>' +
+
+                    ' <img class="direct-chat-img" src="' + userimg + '" alt="Message User Image">' +
+                    ' <div class="direct-chat-text" >' + message + '</div> </div>';
+
+                $('#' + ctrId).find('#divMessage').append(divChatP);
+
+                var htt = $('#' + ctrId).find('#divMessage')[0].scrollHeight;
+                $('#' + ctrId).find('#divMessage').slimScroll({
+                    height: htt
+                });
+            }
+
+        }
+        
+
+        function GetCurrentDateTime(now) {
+
+            var localdate = dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
+
+            return localdate;
+        }
+
+        function AddUser(chatHub, id, name, UserImage, date) {
+
+            var userId = $('#hdId').val();
+
+            var code, Clist;
+            if (userId == id) {
+
+                code = $('<a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"><span class="mr-1">' + name + ',<span class="user-name text-bold-700">' + date + '</span></span><span class="avatar avatar-online"><img class="user__img img-sm" src="' + UserImage + '" alt="" /><i></i></span></a>');
+
+            }
+            else {
+
+                code = $('  <div class="card-footer">'
+                         + '<div class="row row-separator">'
+                                + ' <div class="col-sm-3">'
+                                +' <span class="avatar avatar-online"><img class="user__img img-sm" src="' + UserImage + '" alt="" /><i></i></span>' +
+                            '</div>' +
+                            '<div class=" col-sm-9">' +
+                                '<div class="col-lg-12" style="font-size:12px">' + name +
+                                 '</div>' +
+                                  ' <div class="col-lg-12" style="font-size:12px">' + date +
+                                    '</div>' +
+                            '</div>' +
+                                '</div>' +
+                           
+
+                       ' </div>) ;');
+                   
+                 
+                var UserLink = $('<a id="' + id + '" class="user" >' + name + '<a>');
+                $(code).click(function () {
+
+                    var id = $(UserLink).attr('id');
+
+                    if (userId != id) {
+
+                        var ctrId = 'private_' + id;
+                        $('#' + ctrId).show();
+
+                        if ($('#' + ctrId).length == 0) {
+                            OpenPrivateChatBox(chatHub, id, ctrId, name);
+
+                        }
+
+
+
+
+                    }
+
+                });
+
+                var link = $('<span class="contacts-list-name" id="' + id + '">');
+                $(Clist).click(function () {
+
+                    var id = $(link).attr('id');
+
+                    if (userId != id) {
+                        var ctrId = 'private_' + id;
+                        OpenPrivateChatBox(chatHub, id, ctrId, name);
+
+                    }
+
+                });
+
+            }
+
+            $("#divusers").append(code);
+
+            $("#ContactList").append(Clist);
+
+        }
+
+        function AddMessage(userName, message, time, userimg) {
+
+            var CurrUser = $('#hdUserName').val();
+            var Side = 'right';
+            var TimeSide = 'left';
+
+            if (CurrUser == userName) {
+                Side = 'left';
+                TimeSide = 'right';
+
+            }
+
+            var divChat = '<div class="direct-chat-msg ' + Side + '">' +
+                '<div class="direct-chat-info clearfix">' +
+                '<span class="direct-chat-name pull-' + Side + '">' + userName + '</span>' +
+                '<span class="direct-chat-timestamp pull-' + TimeSide + '"">' + time + '</span>' +
+                '</div>' +
+
+                ' <img class="direct-chat-img" src="' + userimg + '" alt="Message User Image">' +
+                ' <div class="direct-chat-text" >' + message + '</div> </div>';
+
+            $('#divChatWindow').append(divChat);
+
+            var height = $('#divChatWindow')[0].scrollHeight;
+            $('#divChatWindow').scrollTop(height);
+
+        }
+
+        // Creation and Opening Private Chat Div
+        function OpenPrivateChatBox(chatHub, userId, ctrId, userName) {
+
+            var PWClass = $('#PWCount').val();
+
+            if ($('#PWCount').val() == 'default')
+                PWClass = 'default';
+
+
+            $('#PWCount').val(PWClass);
+            var div1 = ' <div class="col-md-12"> <div  id="' + ctrId + '" class="box box-solid box-' + PWClass + ' direct-chat direct-chat-' + PWClass + '">' +
+                '<div class="box-header with-border">' +
+                ' <h3 class="box-title">' + userName + '</h3>' +
+
+                ' <div class="box-tools pull-right">' +
+                ' <span data-toggle="tooltip" id="MsgCountP" title="0 New Messages" class="badge bg-' + PWClass + '">0</span>' +
+                ' <button type="button" class="btn btn-box-tool" data-widget="collapse">' +
+                '    <i class="fa fa-minus"></i>' +
+                '  </button>' +
+                '  <button id="imgDelete" type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button></div></div>' +
+
+                ' <div class="box-body">' +
+                ' <div id="divMessage" class="direct-chat-messages">' +
+
+                ' </div>' +
+
+                '  </div>' +
+                '  <div class="box-footer">' +
+
+
+                '    <input type="text" id="txtPrivateMessage" name="message" placeholder="Type Message ..." class="form-control"  />' +
+
+                '  <div class="input-group">' +
+                '    <input type="text" name="message" placeholder="Type Message ..." class="form-control" style="visibility:hidden;" />' +
+                '   <span class="input-group-btn">' +
+                '          <input type="button" id="btnSendMessage" class="btn btn-' + PWClass + ' btn-flat" value="send" />' +
+                '   </span>' +
+                '  </div>' +
+
+                ' </div>' +
+                ' </div></div>';
+
+
+
+            var $div = $(div1);
+
+            // Closing Private Chat Box
+            $div.find('#imgDelete').click(function () {
+                $('#' + ctrId).hide();
+            });
+
+            // Send Button event in Private Chat
+            $div.find("#btnSendMessage").click(function () {
+
+                $textBox = $div.find("#txtPrivateMessage");
+
+                var msg = $textBox.val();
+                if (msg.length > 0) {
+                    chatHub.server.sendPrivateMessage(userId, msg);
+                    $textBox.val('');
+                }
+            });
+
+            // Text Box event on Enter Button
+            $div.find("#txtPrivateMessage").keypress(function (e) {
+
+                if (e.keyCode == 13) {
+                    /* FOCUS ELEMENT */
+                    var inputs = $(this).parents("form").eq(0).find(":input:visible:not(disabled):not([readonly])"),
+                        idx = inputs.index(this);
+
+                    if (idx == inputs.length - 1) {
+                        inputs[0].select()
+                    } else {
+                        inputs[idx + 1].focus(); // handles submit buttons
+                        inputs[idx + 1].select();
+                    }
+                    return false;
+                }
+            });
+
+            // Clear Message Count on Mouse over           
+            $div.find("#divMessage").mouseover(function () {
+
+                $("#MsgCountP").html('0');
+                $("#MsgCountP").attr("title", '0 New Messages');
+            });
+
+            // Append private chat div inside the main div
+            $('#PriChatDiv').append($div);
+        }
+    </script>--%>
+    <!--End of Tawk.to Script-->
+
+
+
+    <script type="text/javascript">
+
+
+
+        $(function () {
+
+            // Declare a proxy to reference the hub. 
+            var chatHub = $.connection.chatHub;
+            registerClientMethods(chatHub);
+            // Start Hub
+            $.connection.hub.start().done(function () {
+
+                registerEvents(chatHub)
+
+            });
+            $(document).on('change', '#<%= FileUpload1.ClientID%>', function (e) {
+
+                var tmppath = URL.createObjectURL(e.target.files[0]);
+                $("#ImgDisp").attr('src', tmppath);
+
+            });
+
+        });
+
+        function registerEvents(chatHub) {
+
+
+            var name = '<%= this.UserName %>';
+
+            if (name.length > 0) {
+                chatHub.server.connect(name);
+
+            }
+
+
+            $('#btnSendMsg').click(function () {
+
+                var msg = $("#txtMessage").val();
+
+                if (msg.length > 0) {
+
+                    var userName = $('#hdUserName').val();
+
+                    var date = GetCurrentDateTime(new Date());
+
+                    chatHub.server.sendMessageToAll(userName, msg, date);
+                    $("#txtMessage").val('');
+                }
+            });
+
+            $("#txtMessage").keypress(function (e) {
+                if (e.which == 13) {
+                    $('#btnSendMsg').click();
+                }
+            });
+        }
+
+        function registerClientMethods(chatHub) {
+
+
+            // Calls when user successfully logged in
+            chatHub.client.onConnected = function (id, userName, allUsers, messages, times) {
+
+                $('#hdId').val(id);
+                $('#hdUserName').val(userName);
+                $('#spanUser').html(userName);
+
+                // Add All Users
+                for (i = 0; i < allUsers.length; i++) {
+
+                    AddUser(chatHub, allUsers[i].ConnectionId, allUsers[i].UserName, allUsers[i].UserImage, allUsers[i].LoginTime);
+                }
+
+                // Add Existing Messages
+                for (i = 0; i < messages.length; i++) {
+                    AddMessage(messages[i].UserName, messages[i].Message, messages[i].Time, messages[i].UserImage);
+
+                }
+            }
+
+            // On New User Connected
+            chatHub.client.onNewUserConnected = function (id, name, UserImage, loginDate) {
+                AddUser(chatHub, id, name, UserImage, loginDate);
+            }
+
+
+            // On User Disconnected
+            chatHub.client.onUserDisconnected = function (id, userName) {
+
+                $('#Div' + id).remove();
+
+                var ctrId = 'private_' + id;
+                $('#' + ctrId).remove();
+
+
+                var disc = $('<div class="disconnect">"' + userName + '" logged off.</div>');
+
+                $(disc).hide();
+                $('#divusers').prepend(disc);
+                $(disc).fadeIn(200).delay(2000).fadeOut(200);
+
+            }
+
+            chatHub.client.messageReceived = function (userName, message, time, userimg) {
+
+                AddMessage(userName, message, time, userimg);
+            }
+
+
+        }
+
+        function GetCurrentDateTime(now) {
+
+            var localdate = dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
+
+            return localdate;
+        }
+
+        function AddUser(chatHub, id, name, UserImage, date) {
+
+            var userId = $('#hdId').val();
+
+            var code = "";
+            // var UserImage = GetUserImage(name);
+
+            var Clist = "";
+            if (userId == id) {
+
+                code = $('  <div class="card-footer">'
+                    + '<div class="row row-separator">'
+                    + ' <div class="col-sm-3">'
+                    + ' <span class="avatar avatar-online"><img class="user__img img-sm" src="' + UserImage + '" alt="" /><i></i></span>' +
+                    '</div>' +
+                    '<div class=" col-sm-9">' +
+                    '<div class="col-lg-12" style="font-size:12px">' + name +
+                    '</div>' +
+                    ' <div class="col-lg-12" style="font-size:12px">' + date +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+
+
+                    ' </div>) ;');
+
+            }
+            else {
+
+                code = $('  <div class="card-footer" id="Div' + id + '">'
+                    + '<div class="row row-separator">'
+                    + ' <div class="col-sm-3">'
+                    + ' <span class="avatar avatar-online"><img class="user__img img-sm" id="' + id + '" src="' + UserImage + '" alt="" /><i></i></span>' +
+                    '</div>' +
+                    '<div class=" col-sm-9">' +
+                    '<div class="col-lg-12" style="font-size:12px">' + name +
+                    '</div>' +
+                    ' <div class="col-lg-12" style="font-size:12px">' + date +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+
+
+                    ' </div>) ;');
+            }
+
+            $("#divusers").append(code);
+
+
+        }
+
+        function AddMessage(userName, message, time, userimg) {
+
+            var CurrUser = $('#hdUserName').val();
+            var Side = 'right';
+            var TimeSide = 'left';
+
+            if (CurrUser == userName) {
+                Side = 'left';
+                TimeSide = 'right';
+
+            }
+
+            var divChat = '<div class="direct-chat-msg ' + Side + '">' +
+                '<div class="direct-chat-info clearfix">' +
+                '<span class="direct-chat-name pull-' + Side + '">' + userName + '</span>' +
+                '<span class="direct-chat-timestamp pull-' + TimeSide + '"">' + time + '</span>' +
+                '</div>' +
+
+                ' <img class="direct-chat-img" src="' + userimg + '" alt="Message User Image">' +
+                ' <div class="direct-chat-text" >' + message + '</div> </div>';
+
+            $('#divChatWindow').append(divChat);
+
+            var height = $('#divChatWindow')[0].scrollHeight;
+            $('#divChatWindow').scrollTop(height);
+
+        }
+
+    </script>
+</body>
+</html>

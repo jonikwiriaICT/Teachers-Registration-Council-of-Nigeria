@@ -1,0 +1,58 @@
+﻿.float_label{
+    position:absolute; z-index:200; margin-top :94px; left:55px;
+    font-weight :bold ;
+    color :black;
+}
+.imgPhoto{
+    position:absolute; z-index:200; margin-top :2px; left:243px;
+    font-weight :bold ;
+    color :black;
+}
+.rrrNo{
+    position:absolute; z-index:200; margin-top :12px; left:100px;
+    font-weight :bold ;
+    color :black;
+}
+.float_reg{
+     position:absolute; z-index:200; margin-top :113px; left:55px;
+    font-weight :bold ;
+    color :black;
+}
+.float_exp{
+      position:absolute; z-index:200; margin-top :158px; left:104px;
+    font-weight :bold ;
+    color :black;
+    font-size :10px;
+}
+.img_holder{
+       position:absolute; z-index:200; margin-top :180px; left:185px;
+    font-weight :bold ;
+    color :black;
+    font-size :10px;
+}
+.labelCategory{
+      position:absolute; z-index:200; margin-top :120px; left:297px;
+    font-weight :bold ;
+    color :black;
+}
+
+.img_category {
+     position:absolute; z-index:200; margin-top :2px; left:170px;
+    font-weight :bold ;
+    color :black;
+}
+   
+.newpage {
+     page-break-before: always;
+}
+.imgRegistrar{
+     position:absolute; z-index:200; margin-top :130px; left:220px;
+    font-weight :bold ;
+    color :black;
+}
+.imgDate{
+     position:absolute; z-index:200; margin-top :176px; left:220px;
+    font-weight :bold ;
+    color :black;
+}
+
